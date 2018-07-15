@@ -1,13 +1,307 @@
+nav {
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 2em;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    padding-top: 10px;
+    background-color: rgb(242, 242, 242);
+}
+
+.navbar ul li:hover{
+    font-weight: bold;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: inline;
 }
 
-a{
+ul li {
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+a {
+    color: inherit;
     text-decoration: none;
 }
 
-.grid-container{
-    
+.active {
+    font-weight: 700;
+    font-style: italic;
+}
+
+main {
+    margin-top: 1em;
+}
+
+article {
+    width: 90%;
+    padding-left: 5%;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.tameimpala {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.2em;
+    color: rgb(242, 242, 242);
+    padding-top: 0.4em;
+}
+
+.albumname {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3em;
+    color: black;
+    padding-top: 0.4em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1em;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 0.2em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h4 {
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 0.2em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+body {
+    background-color: rgb(242, 242, 242);
+    font-family: 'Quicksand';
+    margin: 0 0 0 0;
+}
+
+.left-option {
+    float: left;
+    padding-left: 2em;
+}
+
+.right-option {
+    float: right;
+    padding-right: 2em;
+    padding-left: -1em;
+}
+
+.navLogo {
+    height: 1.5em;
+}
+
+.mainpage-grid {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 15em 80%;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: 0.3em;
+    border-bottom: 5px solid black;
+    background-image: url('../img/tame-impala-wallpaper.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin-bottom: 10em;
+}
+
+.maincontent {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: left;
+}
+
+.sidecontent {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border-left: 5px solid black;
+}
+
+.mini-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.albums {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding-bottom: 1em;
+}
+
+.ep {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding-bottom: 1em;
+}
+
+.singles {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    padding-bottom: 1em;
+}
+
+footer {
+    overflow: hidden;
+    width: 100%;
+    height: 2em;
+    border-top: 5px solid black;
+    background-color: rgb(242, 242, 242);
+    text-align: center;
+    bottom: 0;
+}
+iframe {
+    margin-bottom: 1em;
+}
+
+.albumpage-grid{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 100%;
+}
+
+.albumcontent {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.albumsongscontent {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    border-left: 5px solid black;
+}
+
+.albuminfogrid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    text-align: center
+}
+
+.albumcover {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: block;
+}
+
+.genresandcritics {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+.year {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.label {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.producer {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.studio {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+.albumpic {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 5px solid black;
+}
+
+.criticlogo {
+    height: 2em;
+}
+
+.review {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.aboutpage-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15em 80%;
+}
+
+.aboutheader {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: 0.3em;
+    border-bottom: 5px solid black;
+    background-image: url('../img/tame-impala-wallpaper-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin-bottom: 10em;
+}
+.sourcetext {
+    font-size: 0.5em;
 }
