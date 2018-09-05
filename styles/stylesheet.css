@@ -1,0 +1,223 @@
+/*
+*** Generella stilregler samt stilregler specifika för mobiltelefoner ***
+*/
+
+@font-face {
+    font-family: 'Fjalla One';
+    src: url(../fonts/FjallaOne-Regular.ttf);
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    font-family: 'Fjalla One', sans-serif;
+    color: #1F1F1F;
+    background-color: #CDC9C5;
+}
+
+header {
+    background: url(../images/layout/header.png) 100% 100% no-repeat;
+    height: 5em;
+    width: 100%;
+}
+
+.header-title-bg {
+    background-color: #CDC9C5;
+    text-align: right;
+    width: 40%;
+    position: relative;
+    top: 1em;
+}
+
+.header-title {
+    margin-right: 1em;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+nav {
+    height: 9em;
+    background-color: #FFFFFF;
+    padding-top: 0.5em;
+    z-index: 1000;
+    border-bottom: 1px solid black;
+}
+
+.scrolled-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.scrolled-nav + .center-wrapper, .scrolled-nav + .single-center-wrapper {
+    margin-top: 10.5em;
+}
+
+main, aside {
+    width: 90%;
+    position: relative;
+    left: 5%;
+    background-color: #FFFFFF;
+    z-index: 900;
+    border-top: 1px solid #FF9933;
+    margin: 1em 0 1em 0;
+    text-align: justify;
+}
+
+.main-article {
+    padding: 0 1em 1em 1em;
+    text-align: justify;
+}
+
+.only-article {
+    width: 95%;
+    position: relative;
+    left: 2.5%;
+}
+
+.images-container {
+    padding: 1em;
+}
+
+footer {
+    background-color: #FFFFFF;
+    position: relative;
+    bottom: 0;
+    height: 6em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    display: block;
+    font-size: 0.8em;
+    padding: 0.1em;
+}
+
+.active {
+    text-decoration: underline;
+    text-decoration-color: #CDC9C5;
+}
+
+img {
+    width: 100%;
+}
+
+.info-text {
+    font-size: 0.9em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.image-quote {
+    font-style: italic;
+    border-top: 1px solid black;
+    padding: 1em 0 0 0;
+}
+
+.news-article {
+    border-bottom: 1px solid black;
+}
+
+.footer-text {
+    margin: 0;
+    padding: 1em 1em 0 1em;
+}
+
+@media (min-width: 420px) {
+    
+    main {
+        width: 60%;
+        left: 0em;
+        min-height: 100%;
+        float: left;
+        margin: 1%;
+    }
+
+    aside {
+        width: 37%;
+        float: left;
+        left: 0;
+        margin: 1% 1% 1% 0;
+    }
+
+    footer {
+        font-size: 0.9em;
+        text-align: center;
+        height: 4em;
+        margin: 0 0 -4em 0;
+        float: left;
+        width: 100%;
+    }
+
+    .scrolled-nav + .center-wrapper, .scrolled-nav + .single-center-wrapper {
+        margin-top: 2.5em;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 1% 0 1%;
+    }
+
+    nav {
+        height: 2em;
+    }
+
+    .single-main {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .single-center-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+
+}
+
+/*
+*** Stilregler specifika för "traditionella" datorskärmar ***
+*/
+
+@media (min-width: 1001px) {
+
+    main {
+        width: 37em;
+        margin: 1em;
+    }
+
+    aside {
+        width: 22.5em;
+        left: 0;
+        margin: 1em 1em 1em 0;
+    }
+
+    .scrolled-nav + .center-wrapper, .scrolled-nav + .single-center-wrapper {
+        margin-top: 2.5em;
+    }
+
+    .center-wrapper {
+        max-width: 63em;
+        margin: 0 auto;
+    }
+
+    .single-center-wrapper {
+        max-width: 63em;
+    }
+}
