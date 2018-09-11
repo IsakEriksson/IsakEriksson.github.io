@@ -2,10 +2,7 @@
     
     'use strict';
 
-    // Get the navbar
     var nav = document.getElementById("nav");
-
-    // Get the offset position of the navbar
     var navOffset = nav.offsetTop;
 
     window.onscroll = function() {
@@ -15,5 +12,13 @@
             nav.classList.remove("scrolled-nav");
         }
     };
+
+    /*document.addEventListener("DOMContentLoaded", function(event){
+        var wrapper = document.getElementById("wrapper");
+        var wrapperOffset = wrapper.offsetHeight;
+        if(wrapperOffset < screen.height) {
+            document.getElementById("footer").classList.add("fixed-footer");
+        }
+    }, false);*/
 
 }())

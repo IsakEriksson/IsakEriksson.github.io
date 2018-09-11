@@ -1,5 +1,5 @@
 /*
-*** Generella stilregler samt stilregler specifika för mobiltelefoner ***
+    Generella stilregler samt stilregler specifika för mobiltelefoner
 */
 
 @font-face {
@@ -8,6 +8,7 @@
 }
 
 html, body {
+    height: 100%;
     margin: 0;
 }
 
@@ -17,6 +18,77 @@ body {
     background-color: #CDC9C5;
 }
 
+main {
+    background-color: #FFFFFF;
+    z-index: 900;
+    border-top: 1px solid #FF9933;
+    margin: 1em 0 1em 0;
+    text-align: justify;
+}
+
+aside {
+    background-color: #FFFFFF;
+}
+
+#content-wrapper {
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+/*
+    Stilregler för text-innehåll
+*/
+.main-article {
+    padding: 0 1em 1em 1em;
+}
+
+.only-article {
+    padding: 0 1em 1em 1em;
+    /*width: 95%;
+    position: relative;
+    left: 2.5%;*/
+}
+
+.news-article {
+    border-bottom: 1px solid black;
+}
+
+h2 {
+    text-align: center;
+}
+/*
+    ------------------------------------------------------------
+*/
+
+/*
+    Stilregler för bild-innehåll
+*/
+.images-container {
+    padding: 1em 1em 0 1em;
+}
+
+img {
+    width: 100%;
+}
+
+.image-quote {
+    font-style: italic;
+    border-top: 1px solid black;
+    padding: 1em;
+    text-align: center;
+}
+
+.info-text {
+    font-size: 0.9em;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+/*
+    Stilregler för header
+*/
 header {
     background: url(../images/layout/header.png) 100% 100% no-repeat;
     height: 5em;
@@ -36,7 +108,14 @@ header {
     font-size: 1.5em;
     margin-top: 0;
 }
+/*
+    ------------------------------------------------------------
+*/
 
+
+/*
+    Stilregler för att hålla headern rätt oavsett scrollning
+*/
 nav {
     height: 9em;
     background-color: #FFFFFF;
@@ -52,46 +131,8 @@ nav {
     width: 100%;
 }
 
-.scrolled-nav + .center-wrapper, .scrolled-nav + .single-center-wrapper {
+.scrolled-nav + #content-wrapper {
     margin-top: 10.5em;
-}
-
-main, aside {
-    width: 90%;
-    position: relative;
-    left: 5%;
-    background-color: #FFFFFF;
-    z-index: 900;
-    border-top: 1px solid #FF9933;
-    margin: 1em 0 1em 0;
-    text-align: justify;
-}
-
-.main-article {
-    padding: 0 1em 1em 1em;
-    text-align: justify;
-}
-
-.only-article {
-    width: 95%;
-    position: relative;
-    left: 2.5%;
-}
-
-.images-container {
-    padding: 1em;
-}
-
-footer {
-    background-color: #FFFFFF;
-    position: relative;
-    bottom: 0;
-    height: 6em;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 ul {
@@ -107,38 +148,51 @@ li {
     padding: 0.1em;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .active {
     text-decoration: underline;
     text-decoration-color: #CDC9C5;
 }
+/*
+    ------------------------------------------------------------
+*/
 
-img {
-    width: 100%;
+
+/*
+    Stilregler för att hålla footern rätt oavsett mängd innehåll
+*/
+#wrapper {
+    min-height: 100%;
+    margin-bottom: -3em;
 }
 
-.info-text {
-    font-size: 0.9em;
-    font-weight: 400;
+footer, .footer-pusher {
+    height: 3em;
+}
+
+footer {
+    background-color: #FFFFFF;
     text-align: center;
-}
-
-.image-quote {
-    font-style: italic;
-    border-top: 1px solid black;
-    padding: 1em 0 0 0;
-}
-
-.news-article {
-    border-bottom: 1px solid black;
+    padding: 0.1em 1em 0.5em 1em;
 }
 
 .footer-text {
-    margin: 0;
-    padding: 1em 1em 0 1em;
+    font-size: 0.8em;
 }
+/*
+    ------------------------------------------------------------
+*/
 
+
+/*
+    Stilregler för skärmar med en vidd över 420px (traditionella datorer, surfplattor, etc)
+*/
 @media (min-width: 420px) {
-    
+    /*
     main {
         width: 60%;
         left: 0em;
@@ -153,29 +207,9 @@ img {
         left: 0;
         margin: 1% 1% 1% 0;
     }
-
-    footer {
-        font-size: 0.9em;
-        text-align: center;
-        height: 4em;
-        margin: 0 0 -4em 0;
-        float: left;
-        width: 100%;
-    }
-
-    .scrolled-nav + .center-wrapper, .scrolled-nav + .single-center-wrapper {
-        margin-top: 2.5em;
-    }
-
-    li {
-        display: inline-block;
-        margin: 0 1% 0 1%;
-    }
-
-    nav {
-        height: 2em;
-    }
-
+    */
+    
+    /*
     .single-main {
         width: 100%;
         margin: 0 auto;
@@ -186,15 +220,65 @@ img {
     .single-center-wrapper {
         width: 90%;
         margin: 0 auto;
-        margin-bottom: 1em;
+        margin-bottom: 6em;
+    }
+    */
+
+    /*
+        Stilregler för att hålla headern rätt oavsett scrollning
+    */
+    /*
+    nav {
+        height: 2em;
     }
 
-}
+    .scrolled-nav + #content-wrapper {
+        margin-top: 3.5em;
+    }
 
+    li {
+        display: inline-block;
+        margin: 0 1% 0 1%;
+    }
+    */
+    /*
+        ------------------------------------------------------------
+    */
+
+
+    /*
+        Stilregler för att hålla footern rätt oavsett mängd innehåll
+    *//*
+    #wrapper {
+        margin-bottom: -3em;
+    }
+
+    footer, .footer-pusher {
+        height: 3em;
+    }
+    
+    footer {
+        background-color: #FFFFFF;
+        text-align: center;
+        padding: 0.1em 1em 0.5em 1em;
+    }
+    
+    .footer-text {
+        font-size: 0.8em;
+    }
+    /*
+        ------------------------------------------------------------
+    */
+}
 /*
-*** Stilregler specifika för "traditionella" datorskärmar ***
+    ------------------------------------------------------------
 */
 
+
+/*
+    Stilregler specifika för "traditionella" datorskärmar
+*/
+/*
 @media (min-width: 1001px) {
 
     main {
@@ -215,9 +299,10 @@ img {
     .center-wrapper {
         max-width: 63em;
         margin: 0 auto;
+        display: block;
     }
 
     .single-center-wrapper {
         max-width: 63em;
     }
-}
+}*/
