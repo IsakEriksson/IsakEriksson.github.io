@@ -28,6 +28,7 @@ main {
 
 aside {
     background-color: #FFFFFF;
+    border-top: 1px solid #FF9933;
 }
 
 #content-wrapper {
@@ -84,6 +85,15 @@ img {
     font-size: 0.9em;
     font-weight: 400;
     text-align: center;
+}
+
+.portrait {
+    position: relative;
+    padding: 0.5em 0.5em 0 0.5em;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    width: 50%;
+    left: 20%;
+    border: 1px solid black;
 }
 
 
@@ -182,7 +192,7 @@ footer {
 }
 
 .footer-text {
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 /*
     ------------------------------------------------------------
@@ -190,85 +200,82 @@ footer {
 
 
 /*
-    Stilregler för skärmar med en vidd över 420px (traditionella datorer, surfplattor, etc)
+    Stilregler för skärmar med en vidd över 432px (traditionella datorer, surfplattor, etc)
 */
-@media (min-width: 420px) {
+@media (min-width: 432px) {
     /*
-    main {
-        width: 60%;
-        left: 0em;
-        min-height: 100%;
-        float: left;
-        margin: 1%;
-    }
-
-    aside {
-        width: 37%;
-        float: left;
-        left: 0;
-        margin: 1% 1% 1% 0;
-    }
+        Stilregler för att placera huvudsakligt innehåll korrekt på större skärmar
     */
+    .double-column-wrapper-1, .double-column-wrapper-2 {
+        display: grid;
+        grid-template-rows: 100%;
+        grid-column-gap: 2%;
+    }
     
-    /*
-    .single-main {
-        width: 100%;
-        margin: 0 auto;
-        margin-top: 1em;
-        margin-bottom: 1em;
+    .double-column-wrapper-1 {
+        grid-template-columns: 69% 29%;
     }
 
-    .single-center-wrapper {
-        width: 90%;
-        margin: 0 auto;
-        margin-bottom: 6em;
+    .double-column-wrapper-2 {
+        grid-template-columns: 29% 69% ;
     }
+
+    .double-main-1, .double-aside-2 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .double-aside-1, .double-main-2 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .double-aside-1, .double-aside-2 {
+        margin: 1em 0 1em 0;
+    }
+    /*
+        --------------------------------------------------------
+    */
+
+    /*
+        Stilregler för bildinnehåll
+    */
+    .portrait {
+        width: 11em;
+        float: left;
+        margin: 0.5em 0.5em 0 0;
+        padding: 1em 1em 1em 1em;
+        left: 0;
+        display: block;
+
+/*
+        position: relative;
+        margin: 1em 1em 1em 1em;
+        width: 50%;
+        left: 20%;
+        text-align: center;*/
+    }
+    /*
+        --------------------------------------------------------
     */
 
     /*
         Stilregler för att hålla headern rätt oavsett scrollning
     */
-    /*
     nav {
         height: 2em;
     }
 
     .scrolled-nav + #content-wrapper {
-        margin-top: 3.5em;
+        margin-top: 2.5em;
     }
 
     li {
         display: inline-block;
         margin: 0 1% 0 1%;
     }
-    */
     /*
-        ------------------------------------------------------------
-    */
-
-
-    /*
-        Stilregler för att hålla footern rätt oavsett mängd innehåll
-    *//*
-    #wrapper {
-        margin-bottom: -3em;
-    }
-
-    footer, .footer-pusher {
-        height: 3em;
-    }
-    
-    footer {
-        background-color: #FFFFFF;
-        text-align: center;
-        padding: 0.1em 1em 0.5em 1em;
-    }
-    
-    .footer-text {
-        font-size: 0.8em;
-    }
-    /*
-        ------------------------------------------------------------
+        --------------------------------------------------------
     */
 }
 /*
@@ -291,10 +298,6 @@ footer {
         width: 22.5em;
         left: 0;
         margin: 1em 1em 1em 0;
-    }
-
-    .scrolled-nav + .center-wrapper, .scrolled-nav + .single-center-wrapper {
-        margin-top: 2.5em;
     }
 
     .center-wrapper {
