@@ -1,3 +1,5 @@
+/*#region phoneRules*/
+
 /*
     Generella stilregler samt stilregler specifika för mobiltelefoner
 */
@@ -31,7 +33,7 @@ aside {
     border-top: 1px solid #FF9933;
 }
 
-#content-wrapper {
+#content-wrapper, .single-center-wrapper {
     width: 90%;
     position: relative;
     left: 5%;
@@ -125,7 +127,7 @@ header {
 
 
 /*
-    Stilregler för att hålla headern rätt oavsett scrollning
+    Stilregler för navigering och header
 */
 nav {
     height: 9em;
@@ -142,7 +144,7 @@ nav {
     width: 100%;
 }
 
-.scrolled-nav + #content-wrapper {
+.scrolled-nav + #content-wrapper, .scrolled-nav + .single-center-wrapper {
     margin-top: 10.5em;
 }
 
@@ -167,6 +169,10 @@ a {
 .active {
     text-decoration: underline;
     text-decoration-color: #CDC9C5;
+}
+
+#nav > ul > li:hover {
+    color: #CDC9C5;
 }
 /*
     ------------------------------------------------------------
@@ -200,7 +206,57 @@ footer {
 
 
 /*
-    Stilregler för skärmar med en vidd över 432px (traditionella datorer, surfplattor, etc)
+    Stilregler för kontaktformulär
+*/
+.contact-form {
+    width: 100%;
+    display: block; 
+}
+
+.form-input {
+    min-width: 100%;
+    font-size: 1.1em;
+    border: 1px solid #FF9933;
+}
+
+#submit-btn {
+    background-color: #CDC9C5;
+    min-height: 3em;
+    min-width: 100%;
+    font-size: 1.2em;
+    border: 1px solid #FF9933;
+}
+/*
+    ------------------------------------------------------------
+*/
+
+
+/*
+    Stilregler för tabellen på medlemssidan
+*/
+.member-table {
+    width: 100%;
+    font-size: 0.7em;
+    border-collapse: collapse;
+}
+th {
+    font-weight: bold;
+}
+tr:nth-child(even){
+    background-color: #CDC9C5;
+}
+td, th {
+    padding: 0.1em;;
+}
+/*
+    ------------------------------------------------------------
+*/
+
+/*#endregion phoneRules*/
+
+/*#region tabletRules*/
+/*
+    Stilregler för skärmar med en vidd över 432px (surfplattor)
 */
 @media (min-width: 432px) {
     /*
@@ -233,9 +289,11 @@ footer {
     .double-aside-1, .double-aside-2 {
         margin: 1em 0 1em 0;
     }
+
     /*
         --------------------------------------------------------
     */
+
 
     /*
         Stilregler för bildinnehåll
@@ -247,17 +305,11 @@ footer {
         padding: 1em 1em 1em 1em;
         left: 0;
         display: block;
-
-/*
-        position: relative;
-        margin: 1em 1em 1em 1em;
-        width: 50%;
-        left: 20%;
-        text-align: center;*/
     }
     /*
         --------------------------------------------------------
     */
+
 
     /*
         Stilregler för att hålla headern rätt oavsett scrollning
@@ -270,6 +322,10 @@ footer {
         margin-top: 2.5em;
     }
 
+    .scrolled-nav + .single-center-wrapper {
+        margin-top: 3.5em;
+    }
+
     li {
         display: inline-block;
         margin: 0 1% 0 1%;
@@ -277,36 +333,85 @@ footer {
     /*
         --------------------------------------------------------
     */
+
+
+    /*
+    Stilregler för kontaktformulär
+    */
+    .contact-content {
+        width: 90%;
+        padding: 0 0 1em 0;
+        margin-left: 5%;
+    }
+            
+    #submit-btn {
+        min-width: 18em;
+    }
+    /*
+        ------------------------------------------------------------
+    */
+
+
+    /*
+    Stilregler för tabellen på medlemssidan
+    */
+    .member-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    /*
+        ------------------------------------------------------------
+    */
 }
 /*
     ------------------------------------------------------------
 */
 
+@media (min-width: 768px) {
+    /*
+        Stilregler för kontaktformulär
+    */
+    .contact-content{
+        max-width: 40em;
+        margin-left: 2em;
+    }
+    .member-table {
+        font-size: 1em;
+    }
+    /*
+        ------------------------------------------------------------
+    */
+}
+/*#endregion tabletRules*/
 
+/*#region desktopRules*/
 /*
     Stilregler specifika för "traditionella" datorskärmar
 */
-/*
-@media (min-width: 1001px) {
-
-    main {
-        width: 37em;
-        margin: 1em;
-    }
-
-    aside {
-        width: 22.5em;
-        left: 0;
-        margin: 1em 1em 1em 0;
-    }
-
-    .center-wrapper {
-        max-width: 63em;
-        margin: 0 auto;
-        display: block;
-    }
-
+@media (min-width: 1025px) {
+    /*
+        Stilregler för sidor med en kolumn innehåll
+    */
     .single-center-wrapper {
-        max-width: 63em;
+        max-width: 60%;
+        margin-left: 20%;
+        left: 0;
     }
-}*/
+    /*
+        ------------------------------------------------------------
+    */
+    
+
+    /*
+        Stilregler för kontaktformulär
+    */
+    .contact-content{
+        max-width: 80%;
+        margin-left: 10%;
+    }
+
+    /*
+        ------------------------------------------------------------
+    */
+}
+/*#endregion desktopRules*/
