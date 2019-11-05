@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Djupvik - kontakt</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content= "width = device-width, initial-scale = 1, maximum-scale = 2"/>
+        <link rel="stylesheet" type="text/css" href="../styles/stylesheet.css"/>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <div class="header-title-bg">
+                    <h1 class="header-title">Djupvik</h1>
+                </div>
+            </header>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">Start</a></li>
+                    <li><a href="info.html">Information</a></li>
+                    <li><a href="guest.html">Gästplatser</a></li>
+                    <li><a href="history.html">Historia</a></li>
+                    <li><a class="active" href="contact.html">Kontakt</a></li>
+                    <li><a href="members.html">Medlemsinfo</a></li>
+                    <li><a href="english.html">In English</a></li>
+                </ul>
+            </nav>
+            <div class="single-center-wrapper">
+                <main>
+                    <article class="only-article contact-content">
+                        <h2>Kontakt</h2>
+                        <p class="general-text">
+                            Vi tar gärna emot förslag på förbättringar från dig som användare!
+                            <br/>
+                            Använd formuläret nedan för att kontakta oss.
+                        </p>
+                        <form action="#" method="POST" id="contact-form" class="contact-form">
+                            <label class="form-label" for="input-header">Rubrik</label><br/>
+                            <input class="form-input" type="text" id="input-header"><br/><br/>
+                            <label class="form-label" for="subject-set">Vad gäller ärendet?</label><br/>
+                            <fieldset id="subject-set">
+                                <input class="radio-input" type="radio" name="subject" id="input-subj-boat" title="Båt" value="Båt">Båt<br/>
+                                <input class="radio-input" type="radio" name="subject" id="input-subj-member" title="Medlem" value="Medlem">Medlem<br/>
+                                <input class="radio-input" type="radio" name="subject" id="input-subj-misc" title="Övrigt" value="Övrigt">Övrigt<br/><br/>
+                            </fieldset>
+                            <label class="form-label" for="contact-set">Hur vill du bli kontaktad?</label><br/>
+                            <fieldset id="contact-set">
+                                <input class="radio-input" type="radio" name="contact-method" id="input-contact-mail" title="Mail" value="Mail">Mail<br/>
+                                <input class="radio-input" type="radio" name="contact-method" id="input-contact-phone" title="Telefon" value="Telefon">Telefon<br/>
+                                <input class="radio-input" type="radio" name="contact-method" id="input-contact-none" title="Inte alls" value="Inte alls">Inte alls<br/><br/>
+                            </fieldset>
+                            <label class="form-label" for="input-phone">Telefon</label><br/>
+                            <input class="form-input" type="text" id="input-phone"><br/><br/>
+                            <label class="form-label" for="input-mail">Mail</label><br/>
+                            <input class="form-input" type="email" id="input-mail"><br/><br/>
+                            <label class="form-label" for="input-description">Beskrivning</label><br/>
+                            <textarea class="form-input" id="input-description" form="contact-form"></textarea><br/><br/>
+                            <input id="submit-btn" type="submit" value="Skicka">
+                        </form>
+                    </article>
+                </main>
+                <div class="footer-pusher"></div>
+            </div>
+        </div>
+        <footer id="footer">
+            <p class="footer-text">Är <i>du</i> medlem i hamnföreningen och inte har tillgång till medlemssidan? Skicka en e-post till sekreteraren (info@djupvikshamn.se)</p>
+        </footer>
+        <script src="../js/main.js"></script>
+    </body>
+</html>
